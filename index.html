@@ -487,6 +487,181 @@
          flex-direction: column;
          align-items: center; /* Center the numbers */
       }
+
+      /* Responsive design improvements */
+      @media (max-width: 1200px) {
+         .container {
+            padding: 0 15px;
+         }
+         .header .navbar a {
+            font-size: 14px;
+         }
+         .header .icons .btn {
+            padding: 8px 16px;
+            font-size: 14px;
+         }
+         .services .box-container .box h3,
+         .services .box-container .box .welding-title {
+            font-size: 2rem;
+         }
+         .services .box-container .box p,
+         .services .box-container .box ul li,
+         .services .box-container .box .welding-description,
+         .services .box-container .box .welding-list li {
+            font-size: 1rem;
+         }
+         .contact .heading {
+            font-size: 2.5rem;
+         }
+         .contact .contact-info .info h3 {
+            font-size: 1.5rem;
+         }
+         .contact .contact-info .info p {
+            font-size: 1rem;
+         }
+         .contact-buttons .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 768px) {
+         .header {
+            flex-direction: column;
+            height: auto;
+         }
+         .header .logo img {
+            height: 80px;
+            width: 80px;
+         }
+         .header .navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+         .header .navbar a {
+            margin: 10px 0;
+         }
+         .header .icons {
+            flex-direction: column;
+            gap: 10px;
+         }
+         .services .box-container {
+            grid-template-columns: 1fr;
+         }
+         .services .box-container .box {
+            text-align: center;
+         }
+         .contact .row {
+            flex-direction: column;
+            align-items: center;
+         }
+         .contact .contact-info,
+         .contact .map-container {
+            max-width: 100%;
+         }
+         .contact-buttons {
+            flex-direction: column;
+            gap: 10px;
+         }
+      }
+
+      @media (max-width: 480px) {
+         .header .navbar a,
+         .header .icons .btn,
+         .contact-buttons .btn {
+            font-size: 12px;
+         }
+         .services .box-container .box h3,
+         .services .box-container .box .welding-title {
+            font-size: 1.5rem;
+         }
+         .services .box-container .box p,
+         .services .box-container .box ul li,
+         .services .box-container .box .welding-description,
+         .services .box-container .box .welding-list li {
+            font-size: 0.875rem;
+         }
+         .contact .heading {
+            font-size: 2rem;
+         }
+         .contact .contact-info .info h3 {
+            font-size: 1.25rem;
+         }
+         .contact .contact-info .info p {
+            font-size: 0.875rem;
+         }
+      }
+
+      .projects {
+         width: 100%;
+         margin: 0 auto; /* Center the section */
+      }
+
+      .projects .box-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 30px;
+         justify-content: center;
+      }
+
+      .projects .box {
+         flex: 1 1 calc(33.333% - 40px); /* Three boxes per row with gap */
+         max-width: calc(33.333% - 40px);
+         box-sizing: border-box;
+         background: #fff;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         text-align: center;
+      }
+
+      .projects .box:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .projects .box .image {
+         width: 100%;
+         height: 200px; /* Fixed height for uniformity */
+         overflow: hidden;
+      }
+
+      .projects .box .image img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover; /* Ensure images cover the area */
+      }
+
+      .projects .box .content {
+         padding: 20px;
+      }
+
+      .projects .box .content .info h2 {
+         font-size: 1.5rem;
+         color: #007BFF;
+         margin-bottom: 10px;
+      }
+
+      .projects .box .content .info p {
+         font-size: 1rem;
+         color: #555;
+      }
+
+      @media (max-width: 768px) {
+         .projects .box {
+            flex: 1 1 calc(50% - 20px); /* Two boxes per row with gap */
+            max-width: calc(50% - 20px);
+         }
+      }
+
+      @media (max-width: 480px) {
+         .projects .box {
+            flex: 1 1 100%; /* One box per row */
+            max-width: 100%;
+         }
+      }
    </style>
 
 </head>
@@ -757,8 +932,7 @@
             </div>
             <div class="content">
                <div class="info">
-                  <h2>Aluminium Works</h2>
-              
+                  <h1>Aluminium Works</h1>
                </div>
                <i class="fas fa-plus"></i>
             </div>
@@ -770,7 +944,7 @@
             </div>
             <div class="content">
                <div class="info">
-                  <h2>Metal Fabrication</h2>
+                  <h1>Metal Fabrication</h1>
                </div>
                <i class="fas fa-plus"></i>
             </div>
@@ -782,7 +956,7 @@
             </div>
             <div class="content">
                <div class="info">
-                  <h2>Welding</h2>
+                  <h1>Welding</h1>
                </div>
                <i class="fas fa-plus"></i>
             </div>
@@ -794,7 +968,7 @@
             </div>
             <div class="content">
                <div class="info">
-                  <h2>Glass Fitting</h2>
+                  <h1>Glass Fitting</h1>
                </div>
                <i class="fas fa-plus"></i>
             </div>
@@ -806,7 +980,7 @@
             </div> 
             <div class="content">
                <div class="info">
-                  <h2>Roofing Solutions</h2>
+                  <h1>Roofing Solutions</h1>
                </div>
                <i class="fas fa-plus"></i>
             </div>
@@ -818,7 +992,7 @@
             </div>
             <div class="content">
                <div class="info">
-                  <h2>Project Design</h2>
+                  <h1>Project Design</h1>
                </div>
                <i class="fas fa-plus"></i>
             </div>
