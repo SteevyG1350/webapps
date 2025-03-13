@@ -549,6 +549,18 @@ section {
   transition: .2s linear;
 }
 
+.services .box-container .box h3,
+.services .box-container .box .welding-title {
+    font-size: 4rem; /* increased service titles font size */
+}
+
+.services .box-container .box p,
+.services .box-container .box ul li,
+.services .box-container .box .welding-description,
+.services .box-container .box .welding-list li {
+    font-size: 1.8rem; /* increased service content font size */
+}
+
 .services .box-container .box h3 {
   font-size: 1.7rem;
   color: var(--black);
@@ -558,7 +570,7 @@ section {
 
 .services .box-container .box p {
   font-size: 1.4rem;
-  color: var(--light-color);
+  color: var (--light-color);
   line-height: 2;
 }
 
@@ -933,6 +945,40 @@ section {
 }
 
 @media (max-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 1rem;
+  }
+
+  .header .logo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    transform: translateY(7%); /* Move logo downwards by 7% */
+  }
+
+  .header .logo img {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+  }
+
+  .header .icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 30px;
+  }
+
+  .header .icons .btn {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    transform: translateY(-90%); /* Move contact icons up by another 20% */
+  }
+
   .header .search-form {
     width: 90%;
   }
@@ -943,12 +989,138 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background-position: right; /* Ensure the rightmost part of the image is visible */
   }
   .home .slide .content {
     text-align: center;
+    color: #fff; /* Ensure text is white for better legibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better legibility */
   }
   .home .slide .content h3 {
     font-size: 3rem;
+  }
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .header .logo {
+    flex: 0 0 auto;
+    margin-right: auto; /* Push logo to left */
+  }
+
+  .header .icons {
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: auto; /* Push contact info to right */
+  }
+
+  .header .navbar {
+    flex: 0 0 100%; /* Full width on new line */
+    order: 3; /* Push nav below logo and contact */
+    margin-top: 1rem;
+  }
+
+  .header .icons .btn {
+    padding: 8px 12px;
+    font-size: 1.2rem;
+  }
+
+  .header .icons .btn i {
+    margin-right: 5px;
+  }
+
+  .home .slide::before {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), transparent); /* Reduce washed-out effect */
+  }
+
+  .services .box-container .box {
+    padding: 2rem; /* Increase padding */
+    background: #f9f9f9; /* Light background for better contrast */
+    border: 1px solid #ddd; /* Add border for better separation */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  .services .box-container .box h3 {
+    font-size: 2.5rem; /* Increase font size */
+    color: #007BFF; /* Match blue accent color */
+    margin-bottom: 1rem; /* Add margin below heading */
+  }
+
+  .services .box-container .box p,
+  .services .box-container .box ul li {
+    font-size: 1.5rem; /* Increase font size */
+    color: #333; /* Darker color for better legibility */
+    line-height: 1.6; /* Increase line height for better readability */
+  }
+
+  .services .box-container .box ul {
+    padding-left: 1.5rem; /* Add padding to the left */
+    list-style: disc; /* Use disc list style */
+  }
+
+  .services .box-container .box ul li {
+    margin-bottom: 0.5rem; /* Add margin below list items */
+  }
+
+  .services .box-container .box .welding-title,
+  .services .box-container .box .welding-description,
+  .services .box-container .box .welding-list li {
+    font-size: 1.5rem; /* Increase font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .header .icons {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .header .icons .btn {
+    padding: 6px 10px;
+    font-size: 1.1rem;
+  }
+
+  .header .navbar {
+    text-align: center;
+  }
+
+  /* Increase font size for the welding title and its icon for better visibility on mobile */
+  .services .box-container .box .welding-title {
+    font-size: 2.5rem; /* increased from 1.5rem or 2.5rem */
+  }
+  .services .box-container .box .welding-title i {
+    font-size: 2.5rem; /* increase icon size accordingly */
+  }
+
+  /* Adjust contact buttons to display horizontally on mobile */
+  .contact-buttons {
+    flex-direction: row;
+    gap: 10px; /* reduced gap */
+    justify-content: center;
+  }
+  .contact-buttons .btn {
+    padding: 8px 12px; /* reduced padding */
+    font-size: 1rem;  /* reduced font size */
+  }
+
+  /* Force horizontal orientation for contact buttons on mobile */
+  .contact-buttons {
+    flex-direction: row !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+  .contact-buttons .btn {
+    padding: 8px 12px !important;
+    font-size: 1rem !important;
   }
 }
 
