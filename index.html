@@ -65,6 +65,7 @@
          height: 100px; /* Increased height */
          width: 100px; /* Set reasonable width */
          border-radius: 10px; /* Added rounded corners */
+         margin-top: -37%; /* Move the logo up by 50% */
       }
 
       .header .navbar a {
@@ -217,6 +218,15 @@
 
          .services .box-container .box {
             text-align: center;
+         }
+
+         .header .icons {
+            display: none;
+         }
+
+         /* Override text alignment for all text in Our Services boxes on mobile */
+         .services .box-container .box {
+            text-align: left !important;
          }
       }
 
@@ -531,8 +541,9 @@
             height: auto;
          }
          .header .logo img {
-            height: 80px;
-            width: 80px;
+            height: 100px; /* lowered by 20% from 80px */
+            width: 59px;
+            margin-top: 24%; /* Lowered the logo down by 40% */
          }
          .header .navbar {
             display: flex;
@@ -564,6 +575,9 @@
             flex-direction: column;
             gap: 10px;
          }
+         .contact-buttons {
+            transform: translateY(-100%);
+         }
       }
 
       @media (max-width: 480px) {
@@ -571,16 +585,16 @@
          .header .icons .btn,
          .contact-buttons .btn {
             font-size: 12px;
-         }
+   2     }
          .services .box-container .box h3,
          .services .box-container .box .welding-title {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
          }
          .services .box-container .box p,
          .services .box-container .box ul li,
          .services .box-container .box .welding-description,
          .services .box-container .box .welding-list li {
-            font-size: 0.875rem;
+            font-size: 1.875rem;
          }
          .contact .heading {
             font-size: 2rem;
@@ -662,6 +676,7 @@
             max-width: 100%;
          }
       }
+
    </style>
 
 </head>
@@ -692,6 +707,12 @@
          <a href="https://wa.me/+254700133140" class="btn whatsapp">
             <i class="fab fa-whatsapp"></i>
          </a>
+      </div>
+      <!-- Mobile-only contact links -->
+      <div class="mobile-nav">
+         <a href="#home" class="btn">Home</a>
+         <a href="#services" class="btn">Services</a>
+         <a href="#contact" class="btn">Contact</a>
       </div>
 
       <form action="" class="search-form">
@@ -759,8 +780,8 @@
 
             <section class="swiper-slide slide" style="background: url(images/home-slide-1.jpg) no-repeat;">
                <div class="content">
-                  <h3>Building Your Vision</h3>
-                  <p><strong style="color: black;">We're not just building structures, we're building dreams.</strong></p> <!-- Made text bold and black -->
+                  <h3 style="color: rgb(0, 0, 0);">Building Your Vision</h2> <!-- Changed color to orange -->
+                  <p><strong style="color: rgb(12, 255, 235);">We're not just building structures, we're building dreams.</strong></p> <!-- Changed color to orange -->
                   <a href="#contact" class="btn">Book a Consultation</a>
                </div>
             </section>
@@ -1015,13 +1036,9 @@
          <div class="swiper-wrapper">
 
             <div class="swiper-slide slide">
-               <p>Choosing Construction Website for our dream home project was the best decision we made. From the
-                  initial consultation to
-                  the final walkthrough, their team was professional, attentive, and dedicated to bringing our vision to
-                  life. The quality
-                  of craftsmanship and attention to detail exceeded our expectations. We are thrilled with our new home
-                  and highly
-                  recommend Construction Website to anyone looking to build a custom home which was great. </p>
+               <p>Working with Dutugi Construction Company for our metal fabrication needs was a fantastic experience. Their attention to detail and quality craftsmanship exceeded our expectations. The team was professional and efficient, delivering outstanding results. Highly recommended for any metal fabrication projects.
+
+                  . </p>
                <div class="user">
                  
                   <div class="info">
@@ -1038,11 +1055,7 @@
             </div>
 
             <div class="swiper-slide slide">
-               <p>As a property developer, I have worked with many construction companies, but Construction Website
-                  stands out for their commitment to quality and reliability. They delivered a complex multi-unit
-                  residential project ahead of schedule and maintained the highest standards of construction. Their
-                  transparent approach and proactive problem-solving made the entire process smooth and stress-free. I
-                  look forward to collaborating with them on future projects.</p>
+               <p>Dutugi Welding and Construction Company delivered exceptional aluminum works for our project. Their team was professional, efficient, and the results were outstanding. The quality of their work and their commitment to excellence made the entire process smooth and stress-free. We couldn't be happier with their service.</p>
                <div class="user">
                   <div class="info">
                      <h3>George Kairu</h3>
@@ -1058,11 +1071,7 @@
             </div>
 
             <div class="swiper-slide slide">
-               <p>Building our new corporate headquarters was a major undertaking, and Construction Website delivered
-                  beyond our expectations. Their team handled every aspect of the project with professionalism and
-                  expertise. The building is not only state-of-the-art but also a true reflection of our company's
-                  values and vision. We appreciate collaborative approach and the commitment to quality that
-                  Construction Website brought to this project.</p>
+               <p>The welding services provided by Dutugi Welding and Construction Company were top-notch. Their expertise and dedication to quality made our project a success. The team was professional, attentive, and delivered excellent results. We highly recommend their welding services for any industrial or residential projects.</p>
                <div class="user">
                   <div class="info">
                      <h3>Virginia Waweru</h3>

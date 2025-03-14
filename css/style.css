@@ -110,6 +110,7 @@ section {
   font-size: 2.5rem;
   color: var(--black);
   text-transform: capitalize;
+  transform: translateY(20%);
 }
 
 .header .logo span {
@@ -563,7 +564,7 @@ section {
 
 .services .box-container .box h3 {
   font-size: 1.7rem;
-  color: var(--black);
+  color: var (--black);
   text-transform: capitalize;
   padding: 1rem 0;
 }
@@ -1073,6 +1074,11 @@ section {
   }
 }
 
+/* Hide mobile-only navigation by default */
+.mobile-nav {
+   display: none;
+}
+
 @media (max-width: 480px) {
   .header .logo img {
     height: 60px;
@@ -1116,11 +1122,43 @@ section {
   .contact-buttons {
     flex-direction: row !important;
     gap: 10px !important;
-    justify-content: center !important;
+    justify-content: right !important;
   }
   .contact-buttons .btn {
     padding: 8px 12px !important;
     font-size: 1rem !important;
+  }
+
+  /* Hide the default contact icons on mobile */
+  .header .icons {
+    display: none;
+  }
+  /* Show mobile-only contact links and move them up by 60% */
+  .mobile-nav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: right;
+    transform: translate(40%, -70%);
+  }
+  .mobile-nav .btn {
+    padding: 8px 12px;
+    font-size: 1rem;
+    background-color: #D44638;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .mobile-nav .btn:hover {
+    background-color: #c2332b;
+  }
+
+  /* Scale home, .services, and .contact buttons by 10% on mobile */
+  .home .btn,
+  .services .btn,
+  .contact .btn {
+    transform: scale(1.1);
   }
 }
 
